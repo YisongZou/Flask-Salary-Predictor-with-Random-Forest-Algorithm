@@ -6,7 +6,7 @@ model.py trains and saves the model to the disk.
 model.pkl is the pickle model 
 
 # App
-app.py contains all the required functions for the flask app.
+app.py is the main function and contains all the required functions for the flask app.
 
 
 
