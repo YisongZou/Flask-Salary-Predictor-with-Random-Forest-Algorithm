@@ -66,24 +66,7 @@
 	</div>
 
      <!-- Main Input For Receiving Query to our ML -->
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-    <form action="{{ url_for('predict')}}"method="post">
+    <form action="{{ url_for('predict')}}"method="post" style="z-index: 10">
     	<input type="text" name="YearsExperience" placeholder="YearsExperience" required="required" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
