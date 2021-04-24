@@ -1,5 +1,5 @@
 # Flask-salary-predictor
-This is project predicts the salary of the employee based on the experience.
+This is project can help you predict the salary based on your years of experience.
 ![pic](https://github.com/YisongZou/IDS721-Final-Project/blob/main/Screen%20Shot%202021-04-22%20at%201.42.12%20AM.png)
 # Model
 model.py trains and saves the model to the disk.
@@ -23,3 +23,5 @@ Run app
 ```
 python3 main.py
 ```
+Website link with continuous delivery enabled.
+https://final-project-311720.uc.r.appspot.com/
