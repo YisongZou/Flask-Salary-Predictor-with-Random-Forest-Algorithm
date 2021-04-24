@@ -21,5 +21,5 @@ python3 model.py
 ```
 Run app
 ```
-python3 app.py
+python3 main.py
 ```
