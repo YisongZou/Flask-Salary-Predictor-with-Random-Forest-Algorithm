@@ -7,8 +7,8 @@ The dataset is the [Kaggle Years of experience and Salary dataset](https://www.k
 
 
 # Model
-model.py trains and saves the model to disk.
-model.pkl is the model compressed in pickle format.
+`model.py` trains and saves the model to disk.
+`model.pkl` is the model compressed in pickle format.
 
 ```python
 # Importing the libraries
@@ -52,7 +52,7 @@ print(model.predict([[1.8]]))
 ```
 
 # App
-main.py has the main function and contains all the required functions for the flask app.
+`main.py` has the main function and contains all the required functions for the flask app.
 
 ```python
 import numpy as np
@@ -114,36 +114,36 @@ Loadtest code repo: https://github.com/YisongZou/IDS721-Finalproject-Locust-load
 
 
 ## Set up Google Cloud Project:
-Step 1: Create new gcp project:
+Step 1: Create new GCP project
 
-Step 2: Check to see if your console is pointing to the correct project:
+Step 2: Check to see if the console is pointing to the correct project
 ```python
 gcloud projects describe $GOOGLE_CLOUD_PROJECT
 ```
 
-Step 3: Set working project if not correct:
+Step 3: Set working project if not correct
 ```python
 gcloud config set project $GOOGLE_CLOUD_PROJECT
 ```
 
-Step 4: Follow steps 1-4 under "Running the Web Application locally" to set up github repo and test Flask application:
+Step 4: Follow Step 1-4 to set up github repo and test Flask application
 
-Step 5: In the root project of the folder, replace PROJECT-ID below with your GCP project-id, and build the google cloud containerized flask application:
+Step 5: In the root project of the folder, replace PROJECT-ID below with the correct GCP project-id, and build the google cloud containerized flask application
 ```python
 gcloud builds submit --tag gcr.io/<PROJECT-ID>/app
 ```
 
-Step 6: In the root folder of the project, replace PROJECT-ID below with your GCP project-id, and run the flask application:
+Step 6: In the root folder of the project, replace PROJECT-ID below with the correct GCP project-id, and run the flask application
 ```python
 gcloud run deploy --image gcr.io/<PROJECT-ID>/app --platform managed
 ```
 
-Step 7: Paste the URL link provided on the console, in your preferred browser to run the application
+Step 7: Paste the URL link provided on the console, in a preferred browser to run the application
 
 
-## Set up Continuous Integration/Continuous Deployment (CI/CD):
+## Set up Continuous Integration/Continuous Deployment (CI/CD)
 
-Step 1: Navigate to Github Actions and create a new workflow. Add a main.yaml file with the below specifications:
+Step 1: Navigate to Github Actions and create a new workflow. Add a `main.yaml` file with the below specifications
 ```python
 name: Flask Salary Predictor
 
@@ -156,7 +156,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.8
+    - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
         python-version: 3.8
@@ -168,7 +168,7 @@ jobs:
         make lint
 ```
 
-Step 2: Open Cloud Run on GCP console:
+Step 2: Open Cloud Run on GCP console
 
 - Update Memory specification to 512 MiB.
 - Update Timeout specification to 500 seconds.
@@ -176,12 +176,12 @@ Step 2: Open Cloud Run on GCP console:
 
 ![Cloud-Run-Configuration-Specs](https://user-images.githubusercontent.com/26104722/99288926-4b1e6800-280a-11eb-8284-cc433dd6a22c.png)
 
-Step 3: Open Cloud Build on GCP console:
+Step 3: Open Cloud Build on GCP console
 
-- Create a new trigger.
-- Specify github repository.
-- Triggered on Master branch.
-- Deployment specifications already available in: `cloudbuild.yaml` file.
+- Create a new trigger
+- Specify github repository
+- Triggered on Master branch
+- Deployment specifications already available in: `cloudbuild.yaml` file
 
 Step 4: Test CI/CD:
 Update github repo by merging feature branch into master branch. This will automatically trigger Github actions to lint and test the code, along with triggering Cloud Build to deploy the code updates into the production flask container. 
