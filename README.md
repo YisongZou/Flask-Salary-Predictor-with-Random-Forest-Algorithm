@@ -90,7 +90,7 @@ if __name__ == "__main__":
 
 1) Clone the repo
 ```python
-git clone https://github.com/PranavM98/Prediction-of-Stock-Prices---Dash-App.git
+git clone https://github.com/YisongZou/IDS721-Final-Project.git
 ```
 2) Setup - Install the required packages
 ```python
@@ -145,7 +145,7 @@ Step 7: Paste the URL link provided on the console, in your preferred browser to
 
 Step 1: Navigate to Github Actions and create a new workflow. Add a main.yaml file with the below specifications:
 ```python
-name: Movie Recommendation Engine
+name: Flask Salary Predictor
 
 on: [push]
 
@@ -170,23 +170,18 @@ jobs:
 
 Step 2: Open Cloud Run on GCP console:
 
-Update Memory specification to 512 MiB.
-
-Update Timeout specification to 500 seconds.
-
-Save and Re-Deploy Cloud Run application.
+- Update Memory specification to 512 MiB.
+- Update Timeout specification to 500 seconds.
+- Save and Re-Deploy Cloud Run application.
 
 ![Cloud-Run-Configuration-Specs](https://user-images.githubusercontent.com/26104722/99288926-4b1e6800-280a-11eb-8284-cc433dd6a22c.png)
 
 Step 3: Open Cloud Build on GCP console:
 
-Create a new trigger.
-
-Specify github repository.
-
-Triggered on Master branch.
-
-Deployment specifications already available in: cloudbuild.yaml file.
+- Create a new trigger.
+- Specify github repository.
+- Triggered on Master branch.
+- Deployment specifications already available in: `cloudbuild.yaml` file.
 
 Step 4: Test CI/CD:
 Update github repo by merging feature branch into master branch. This will automatically trigger Github actions to lint and test the code, along with triggering Cloud Build to deploy the code updates into the production flask container. 
