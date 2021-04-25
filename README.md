@@ -159,7 +159,7 @@ jobs:
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
-        python-version: 3.8
+        python-version: 3.7
     - name: Install dependencies
       run: |
         make install
@@ -170,9 +170,9 @@ jobs:
 
 Step 2: Open Cloud Run on GCP console
 
-- Update Memory specification to 512 MiB.
-- Update Timeout specification to 500 seconds.
-- Save and Re-Deploy Cloud Run application.
+- Update memory specification to 512 MiB.
+- Update timeout specification to 500 seconds.
+- Save and re-deploy Cloud Run application.
 
 ![Cloud-Run-Configuration-Specs](https://user-images.githubusercontent.com/26104722/99288926-4b1e6800-280a-11eb-8284-cc433dd6a22c.png)
 
@@ -183,5 +183,6 @@ Step 3: Open Cloud Build on GCP console
 - Triggered on Master branch
 - Deployment specifications already available in: `cloudbuild.yaml` file
 
-Step 4: Test CI/CD:
+Step 4: Test CI/CD
+
 Update github repo by merging feature branch into master branch. This will automatically trigger Github actions to lint and test the code, along with triggering Cloud Build to deploy the code updates into the production flask container. 
