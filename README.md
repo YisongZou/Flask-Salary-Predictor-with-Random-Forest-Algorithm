@@ -10,7 +10,7 @@ The dataset is the [Kaggle Years of experience and Salary dataset](https://www.k
 model.py trains and saves the model to disk.
 model.pkl is the model compressed in pickle format.
 
-```
+```python
 # Importing the libraries
 import numpy as np
 import matplotlib.pyplot as plt
@@ -54,7 +54,7 @@ print(model.predict([[1.8]]))
 # App
 main.py has the main function and contains all the required functions for the flask app.
 
-```
+```python
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
@@ -89,19 +89,19 @@ if __name__ == "__main__":
 ## How to Run the App
 
 1) Clone the repo
-```
+```python
 git clone https://github.com/PranavM98/Prediction-of-Stock-Prices---Dash-App.git
 ```
 2) Setup - Install the required packages
-```
+```python
 make all
 ```
 3) Train the model
-```
+```python
 python3 model.py
 ```
 4) Run the application
-```
+```python
 python3 main.py
 ```
 
