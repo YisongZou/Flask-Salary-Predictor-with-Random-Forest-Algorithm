@@ -1,7 +1,7 @@
 # Flask Salary Predictor
-This project can help predict the salary based on your years of experience.
+In this project, we are going to use a random forest algorithm (or any other preferred algorithm) from scikit-learn library to help predict the salary based on your years of experience. We will use Flask as it is a very light web framework to handle the POST requests.
 
-The dataset is the [Kaggle Years of experience and Salary dataset](https://www.kaggle.com/rohankayan/years-of-experience-and-salary-dataset)
+The dataset is from [Kaggle Years of experience and Salary dataset](https://www.kaggle.com/rohankayan/years-of-experience-and-salary-dataset)
 
 ![pic](https://github.com/YisongZou/IDS721-Final-Project/blob/main/Screen%20Shot%202021-04-22%20at%201.42.12%20AM.png)
 
@@ -30,11 +30,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, rando
 
 # Train the model
 
-## linear model
-#from sklearn.linear_model import LinearRegression
-#regressor = LinearRegression()
-
-# random forest model
+# random forest model (or any other preferred algorithm)
 from sklearn.ensemble import RandomForestRegressor
 regressor = RandomForestRegressor(n_estimators=20, random_state=0)
 
@@ -52,7 +48,7 @@ print(model.predict([[1.8]]))
 ```
 
 # App
-`main.py` has the main function and contains all the required functions for the flask app.
+`main.py` has the main function and contains all the required functions for the flask app. In the code, we have created the instance of the Flask() and loaded the model. `model.predict()` method takes input from the json request and converts it into 2D numpy array. The results are stored and returned into the variable named `output`. Finally, we used port 8080 and have set debug=True to enable debugging when necessary.
 
 ```python
 import numpy as np
@@ -107,13 +103,13 @@ python3 main.py
 
 ## Load Testing
 
-Website link with continuous delivery enabled.
+Website link with Continuous Delivery enabled.
 https://final-project-311720.uc.r.appspot.com/
 
 Loadtest code repo: https://github.com/YisongZou/IDS721-Finalproject-Locust-load-test
 
 
-## Set up Google Cloud Project:
+## Set up Google Cloud Project
 Step 1: Create new GCP project
 
 Step 2: Check to see if the console is pointing to the correct project
