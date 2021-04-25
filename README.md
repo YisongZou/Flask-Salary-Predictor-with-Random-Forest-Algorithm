@@ -135,10 +135,7 @@ Step 7: Paste the URL link provided on the console, in a preferred browser to ru
 - Deployment specifications already available in: `cloudbuild.yaml` file
 - Push a simple change; Triggered on Master branch
 - View progress in [build triggers page](https://console.cloud.google.com/cloud-build/triggers)
-
-Step 4: Test CD
-
-Update github repo by merging feature branch into master branch or change part of the code on website layout. This will automatically trigger Github actions to lint and test the code, along with triggering Cloud Build to deploy the code updates into the production flask container. 
+    - Update github repo by merging feature branch into master branch or change part of the code on website layout. This will automatically trigger Github actions to lint and test the code, along with triggering Cloud Build to deploy the code updates into the production flask container. 
 
 
 ## Load Testing
