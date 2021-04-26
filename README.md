@@ -5,7 +5,10 @@ The dataset is from [Kaggle Years of experience and Salary dataset](https://www.
 
 ![pic](https://github.com/YisongZou/IDS721-Final-Project/blob/main/Screen%20Shot%202021-04-22%20at%201.42.12%20AM.png)
 
+# Architecture
 ![image](https://user-images.githubusercontent.com/61890131/116028539-37bec680-a60c-11eb-8527-35cf3cf1dac5.png)
+
+The above diagram is the cloud architecture of our salary prediction system. Inside the cloud diagram we have our google cloud services listed: Storage Bucket, Compute Instance, Cloud Run, and Cloud Build. The storage bucket stores the kaggle salary dataset. The compute instances are where code files lie within the cloud platform. Cloud run sets up continuous deployment which allows us to deploy our website smoothly every time we make changes. 
 
 # Model
 `model.py` trains and saves the model to disk.
