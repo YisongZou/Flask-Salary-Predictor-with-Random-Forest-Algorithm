@@ -5,6 +5,7 @@ The dataset is from [Kaggle Years of experience and Salary dataset](https://www.
 
 ![pic](https://github.com/YisongZou/IDS721-Final-Project/blob/main/Screen%20Shot%202021-04-22%20at%201.42.12%20AM.png)
 
+![image](https://user-images.githubusercontent.com/61890131/116028539-37bec680-a60c-11eb-8527-35cf3cf1dac5.png)
 
 # Model
 `model.py` trains and saves the model to disk.
