@@ -8,7 +8,7 @@ The dataset is from [Kaggle Years of experience and Salary dataset](https://www.
 # Architecture
 ![image](https://user-images.githubusercontent.com/61890131/116028539-37bec680-a60c-11eb-8527-35cf3cf1dac5.png)
 
-The above diagram is the cloud architecture of our salary prediction system. Inside the cloud diagram we have our google cloud services listed: Storage Bucket, Compute Instance, Cloud Run, and Cloud Build. The storage bucket stores the kaggle salary dataset. The compute instances are where code files lie within the cloud platform. We update our github repo by merging feature branch into master branch or change part of the code of the website layout. This will automatically trigger Github actions to lint and test the code, along with triggering Cloud Build to deploy the code updates into the production flask container.
+The above diagram is the cloud architecture of our salary prediction system. Inside the cloud diagram we have our google cloud services listed: Storage Bucket, Compute Instance, Cloud Run, and Cloud Build. The storage bucket stores the kaggle salary dataset. The compute instances are where code files lie within the cloud platform. We update our github repo by merging feature branch into master branch or change part of the code of the website layout. This will automatically trigger Cloud Build to deploy the code updates into the production flask container.
 
 # Model
 `model.py` trains and saves the model to disk.
