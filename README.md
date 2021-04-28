@@ -1,5 +1,6 @@
 # Flask Salary Predictor
 In this project, we are going to use a random forest algorithm (or any other preferred algorithm) from scikit-learn library to help predict the salary based on your years of experience. We will use Flask as it is a very light web framework to handle the POST requests.
+Project description video: https://www.youtube.com/watch?v=QImMWBdnEJY
 
 The dataset is from [Kaggle Years of experience and Salary dataset](https://www.kaggle.com/rohankayan/years-of-experience-and-salary-dataset)
 
