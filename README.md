@@ -147,5 +147,5 @@ Website link with Continuous Delivery enabled.
 https://final-project-311720.uc.r.appspot.com/
 
 Loadtest code repo: https://github.com/YisongZou/IDS721-Finalproject-Locust-load-test
-
-
+```Photo shows that the load test can handle uo to 1k+ requests per second```
+![]https://github.com/YisongZou/IDS721-Finalproject-Locust-load-test/blob/main/IMG_1076.PNG
