@@ -13,7 +13,7 @@ import requests
 import json
 
 # Importing the dataset
-dataset = pd.read_csv('Salary_Data.csv')
+dataset = pd.read_csv('US_Gold_Medals.csv')
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 1].values
 
@@ -24,12 +24,12 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, rando
 # Fitting Simple Linear Regression to the Training set
 
 ## linear model
-#from sklearn.linear_model import LinearRegression
-#regressor = LinearRegression()
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
 
 # random forest model
-from sklearn.ensemble import RandomForestRegressor
-regressor = RandomForestRegressor(n_estimators=20, random_state=0)
+#from sklearn.ensemble import RandomForestRegressor
+#regressor = RandomForestRegressor(n_estimators=20, random_state=0)
 
 regressor.fit(X_train, y_train)
 

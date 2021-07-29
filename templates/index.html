@@ -6,7 +6,7 @@
     <meta name="keywords" content="Recruitment Agency, Recruitment Agency, Recruitment Model, Recruitment Agency, Faq">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Salary Prediction</title>
+    <title>Medal Prediction</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/nicepage.css') }}" media="screen">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Page-1.css') }}" media="screen">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" media="screen">
@@ -39,14 +39,14 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Page-1.html" style="padding: 10px 20px;">Salary predictor home</a>
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Page-1.html" style="padding: 10px 20px;">Medal predictor home</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-1.html" style="padding: 10px 20px;">Salary predictor home</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-1.html" style="padding: 10px 20px;">Mdeal predictor home</a>
 </li></ul>
               </div>
             </div>
@@ -56,8 +56,8 @@
       </div></header>
     <section class="u-align-left u-clearfix u-image u-shading u-section-1" id="carousel_c805" data-image-width="1280" data-image-height="851">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-body-alt-color u-text-1">Salary Predictor</h2>
-        <p class="u-text u-text-body-alt-color u-text-2">We can help you predict your salary based on your years of experience!</p>
+        <h2 class="u-text u-text-body-alt-color u-text-1">Oracle OraLympics USA National Team Gold Medal Predictor</h2>
+        <p class="u-text u-text-body-alt-color u-text-2">predict the number of gold medals USA team will get based on Olympic years!</p>
       </div>
     </section>
     <div class="login">
@@ -67,7 +67,7 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post" style="z-index: 10">
-    	<input type="text" name="YearsExperience" placeholder="YearsExperience" required="required" />
+    	<input type="text" name="YearsExperience" placeholder="Olympic Year" required="required" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
