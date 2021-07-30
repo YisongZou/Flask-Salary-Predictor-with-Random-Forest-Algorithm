@@ -24,4 +24,5 @@ def predict():
     return render_template('index.html', prediction_text='Gold Medal Number is {}'.format(output))
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port=8080, debug=True)
+    #app.run(host='127.0.0.1', port=8080, debug=True)
+    app.run()
